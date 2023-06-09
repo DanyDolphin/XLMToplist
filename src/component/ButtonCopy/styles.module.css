@@ -1,0 +1,6 @@
+.btn-copied {
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-hover-bg: var(--color-primary-dark);
+  --bs-btn-color: white;
+  --bs-btn-hover-color: white;
+}

@@ -1,16 +1,13 @@
-// Nextjs
-import Image from 'next/image'
-
-// Assets
-import iconCopy from '../../../assets/icon-copy.svg'
+// Components
+import { ToplistBrandLogo } from './ToplistBrandLogo'
+import { ToplistRate } from './ToplistRate'
+import { ButtonCopy } from '@/component/ButtonCopy'
 
 // Styles
 import styles from './styles.module.css'
 
 // Types
 import { Content } from '@/types'
-import { ToplistBrandLogo } from './ToplistBrandLogo'
-import { ToplistRate } from './ToplistRate'
 
 export const ToplistLayout = ({ content }: { content: Content }) => {
   return (
@@ -31,10 +28,7 @@ export const ToplistLayout = ({ content }: { content: Content }) => {
           </p>
           <p>Terms &amp; conditions apply.</p>
           <div className="vstack gap-1 w-100 w-sm-75 align-self-center align-self-md-stretch">
-            <button className="btn btn-block btn-outline-dashed">
-              {content.data.ctpromo_code}&nbsp;
-              <Image src={iconCopy} alt="Copy" />
-            </button>
+            <ButtonCopy text={content.data.ctpromo_code} />
             <a
               role="button"
               href={content.data.externalUrl}

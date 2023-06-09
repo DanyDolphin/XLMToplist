@@ -1,5 +1,6 @@
 :root {
   --color-primary: #3A66D5;
+  --color-primary-dark: #2A4C9B;
   --color-secondary: #01A298;
   --color-secondary-dark: #015751;
   --color-gray: #575757;
@@ -61,8 +62,7 @@ body, p, span, .font-body {
 
 .btn-outline-dashed {
   border: 1px dashed black;
-  background-color: transparent;
-  color: var(--color-primary);
+  --bs-btn-color: var(--color-primary);
 }
 
 @media screen and (min-width: 576px) {
