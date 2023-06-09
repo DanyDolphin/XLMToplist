@@ -1,6 +1,8 @@
 :root {
   --color-primary: #3A66D5;
   --color-secondary: #01A298;
+  --color-secondary-dark: #015751;
+  --color-gray: #575757;
 
   --font-header: 'Arial', sans-serif;
   --font-body: 'Georgia', serif;
@@ -13,7 +15,16 @@
 .btn {
   --bs-btn-padding-x: 40px;
   --bs-btn-padding-y: 12px;
-  --bs-btn-border-radius: 4px
+  --bs-btn-border-radius: 4px;
+  --bs-btn-font-weight: 700;
+  --bs-btn-font-family: var(--font-body);
+}
+
+.btn-secondary {
+  --bs-btn-bg: var(--color-secondary);
+  --bs-btn-color: white;
+  --bs-btn-border-color: var(--color-secondary);
+  --bs-btn-hover-bg: var(--color-secondary-dark);
 }
 
 h1, h2, h3, h4, h5, h6, .font-header {
@@ -32,6 +43,10 @@ body, p, span, .font-body {
   color: var(--color-secondary);
 }
 
+.color-gray {
+  color: var(--color-gray);
+}
+
 .btn-sm {
   --bs-btn-padding-y: 4px;
 }
@@ -45,6 +60,13 @@ body, p, span, .font-body {
 }
 
 .btn-outline-dashed {
-  border: 1px dashed var(--color-primary);
+  border: 1px dashed black;
   background-color: transparent;
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 576px) {
+  .w-sm-75 {
+    width: 75%!important;
+  }
 }
