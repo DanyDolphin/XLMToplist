@@ -1,3 +1,6 @@
+// Nextjs
+import Head from 'next/head'
+
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/styles/globals.css'
@@ -6,5 +9,12 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
